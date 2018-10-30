@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.com/tariffs"
+	xmlns:tns="http://www.example.com/tariffs" elementFormDefault="qualified">
+
+	<element name="tariffs">
+		<complexType>
+			<sequence>
+				<element name="tariff" type="tns:Tariff" minOccurs="2"
+					maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+
+	</element>
+
+	<complexType name="Tariff">
+		<sequence>
+			<element name="name" type="string" />
+			<element name="payroll" type="decimal" />
+			<element name="dateOfCreation" type="dateTime" />
+		</sequence>
+
+		<attribute name="id" type="tns:id" use="required" />
+		<attribute name="operator" use="optional" default="VELCOM">
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="VELCOM"></enumeration>
+					<enumeration value="MTS"></enumeration>
+					<enumeration value="LIFE"></enumeration>
+
+				</restriction>
+			</simpleType>
+		</attribute>
+
+	</complexType>
+
+	<complexType name="CallPrice">
+		<sequence>
+			<element name="inNetworkCallPrice" type="decimal" />
+			<element name="outNetworkCallPrice" type="decimal" />
+			<element name="toStationaryCallPrice" type="decimal" />
+			<element name="smsPrice" type="decimal" />
+		</sequence>
+	</complexType>
+
+
+	<complexType name="Parameters">
+
+		<all>
+			<element name="favouriteNumber" type="tns:Telephone"
+				minOccurs="0" maxOccurs="1" />
+			<element name="timeTarification">
+				<simpleType>
+					<restriction base="positiveInteger">
+						<minInclusive value="12" />
+						<maxInclusive value="60" />
+					</restriction>
+				</simpleType>
+			</element>
+			<element name="tariffConnectPrice" type="decimal" />
+		</all>
+
+	</complexType>
+
+	<simpleType name="id">
+		<restriction base="ID">
+			<pattern value="[a-zA-Z0-9]{1,20}" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="Telephone">
+		<restriction base="string">
+			<pattern value="[(+375)]\\d{9}" />
+		</restriction>
+	</simpleType>
+
+
+</schema>
+       
+               

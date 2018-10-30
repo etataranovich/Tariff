@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tariffs xmlns:tns="http://www.example.org/Tarriff" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="TariffHandler/tariffs.xsd">
+	<tariff id="1" operator="VELCOME">
+		<name>the best</name>
+		<payroll>15</payroll>
+		<dateOfCreation>2002-05-30T09:00:00</dateOfCreation>
+
+		<callPrice>
+
+			<inNetworkCallPrice>0.01</inNetworkCallPrice>
+			<outNetworkCallPrice>0.02</outNetworkCallPrice>
+			<toStationaryCallPrice>0.03</toStationaryCallPrice>
+			<smsPrice>0.001</smsPrice>
+		</callPrice>
+
+		<parameters>
+
+			<timeTarification>12</timeTarification>
+			<tariffToConnectPrice>0.09</tariffToConnectPrice>
+			<favouriteNumber>+375445674890</favouriteNumber>
+
+		</parameters>
+	</tariff>
+
+
+	<tariff id="2" operator="MTS">
+		<name>flexible</name>
+		<payroll>10</payroll>
+		<dateOfCreation>2012-06-30T11:20:00</dateOfCreation>
+
+
+		<callPrice>
+
+			<inNetworkCallPrice>0.01</inNetworkCallPrice>
+			<outNetworkCallPrice>0.01</outNetworkCallPrice>
+			<toStationaryCallPrice>0.01</toStationaryCallPrice>
+			<smsPrice>0.001</smsPrice>
+		</callPrice>
+
+
+
+		<parameters>
+
+			<timeTarification>60</timeTarification>
+			<tariffToConnectPrice>0.09</tariffToConnectPrice>
+
+		</parameters>
+	</tariff>
+
+
+	<tariff id="3" operator="MTS">
+		<name>comfortable</name>
+		<payroll>5</payroll>
+		<dateOfCreation>2004-05-30T08:00:00</dateOfCreation>
+
+
+		<callPrice>
+
+			<inNetworkCallPrice>0.02</inNetworkCallPrice>
+			<outNetworkCallPrice>0.04</outNetworkCallPrice>
+			<toStationaryCallPrice>0.08</toStationaryCallPrice>
+			<smsPrice>0.004</smsPrice>
+
+		</callPrice>
+
+		<parameters>
+
+			<timeTarification>12</timeTarification>
+			<tariffToConnectPrice>1.10</tariffToConnectPrice>
+
+		</parameters>
+	</tariff>
+
+<tariff id="7" operator="VELCOME">
+		<name>the favour</name>
+		<payroll>16</payroll>
+		<dateOfCreation>2002-05-30T09:00:00</dateOfCreation>
+
+		<callPrice>
+
+			<inNetworkCallPrice>0.01</inNetworkCallPrice>
+			<outNetworkCallPrice>0.02</outNetworkCallPrice>
+			<toStationaryCallPrice>0.03</toStationaryCallPrice>
+			<smsPrice>0.001</smsPrice>
+		</callPrice>
+
+		<parameters>
+
+			<timeTarification>60</timeTarification>
+			<tariffToConnectPrice>0.05</tariffToConnectPrice>
+			<favouriteNumber>+375265684890</favouriteNumber>
+
+		</parameters>
+	</tariff>
+</tariffs>
+    
+    
+     
+    
